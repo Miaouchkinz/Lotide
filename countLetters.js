@@ -24,7 +24,7 @@ const countLetters = function(string) {
 };
 
 // TEST
-assertEqual(countLetters("hello there"), {h: 2, e: 3, l: 2, o: 1, t: 1, r: 1});
-assertEqual(countLetters("hello there"), {h: 2, e: 3, l: 2, o: 1, t: 1, r: 1});
-assertEqual(countLetters("orange apples"), {o: 1, r: 1, a: 2, n: 1, g: 1, e: 2, p: 2, l: 1, s: 1});
-assertEqual(countLetters("meow"), {m: 1, e: 1, o: 1, w: 1});
+// assertEqual(countLetters("hello there"), {h: 2, e: 3, l: 2, o: 1, t: 1, r: 1});
+// assertEqual(countLetters("hello there"), {h: 2, e: 3, l: 2, o: 1, t: 1, r: 1});
+// assertEqual(countLetters("orange apples"), {o: 1, r: 1, a: 2, n: 1, g: 1, e: 2, p: 2, l: 1, s: 1});
+// assertEqual(countLetters("meow"), {m: 1, e: 1, o: 1, w: 1});
