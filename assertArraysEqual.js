@@ -1,4 +1,4 @@
-const assertArraysEqual = function(firstArray, secondArray) {
+const eqArrays  = function(firstArray, secondArray) {
   let isSame = true;
   if (firstArray.length !== secondArray.length) {
     isSame = false;
@@ -8,20 +8,25 @@ const assertArraysEqual = function(firstArray, secondArray) {
       isSame = false;
     }
   }
-  if (isSame === true) {
-    console.log(`✅✅✅ Assertion Passed: these arrays are equal!`);
+  return isSame;
+};
+
+const assertArraysEqual = function(actual, expected) {
+  const inspect = require('util').inspect;
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: these arrays are not equal!`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
   }
 };
 
 // Tests
 
-// eqArrays([1, 2, 3], [3, 2, 1]) // => false
-// assertArraysEqual([1, 2, 3], [3, 2, 1]);
+eqArrays([1, 2, 3], [3, 2, 1]) // => false
+assertArraysEqual([1, 2, 3], [3, 2, 1]);
 
-// eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-// assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
+eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
 
-// eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
-// assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
+eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
