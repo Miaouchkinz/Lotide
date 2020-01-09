@@ -42,5 +42,5 @@ const letterPositions = function(sentence) {
 };
 
 // TEST
-console.log(letterPositions("hello"));
-assertArraysEqual(letterPositions("hello").e, [1]);
+// console.log(letterPositions("hello"));
+// assertArraysEqual(letterPositions("hello").e, [1]);
