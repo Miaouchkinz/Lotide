@@ -25,9 +25,9 @@ const assertArraysEqual = function(actual, expected) {
 
 const without = function(givenArray, removeElements) {
   let modifiedArray = [];
-  for (let i = 0; i < givenArray.length; i++) {
-    if (removeElements[i] !== givenArray[i]) {
-      modifiedArray.push(givenArray[i]);
+  for (let item of givenArray) {
+    if (!removeElements.includes(item)) {
+      modifiedArray.push(item);
     }
   }
   return modifiedArray;
@@ -35,6 +35,6 @@ const without = function(givenArray, removeElements) {
 
 // Tests
 
-// assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
-// assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]
-// assertArraysEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world", "lighthouse"]); // no need to capture return value for this test case
+assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // => ["1", "2"]
+assertArraysEqual(without(["hello", "world", "lighthouse"], ["lighthouse"]), ["hello", "world"]); // no need to capture return value for this test case
