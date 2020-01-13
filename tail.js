@@ -1,8 +1,7 @@
 const assertEqual = require('./assertEqual');
 
-const tail = function(tailOfArray) {
-  tailOfArray.shift();
-  return tailOfArray;
+const tail = function(array) {
+  return array.shift();
 };
 
 // TEST 1:

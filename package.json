@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@gabrichard/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A mini copy of the Lodash Library created at Lighthouse Labs.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Miaouchkinz/Lotide.git"
   },
-  "author": "",
+  "author": "@gabrichard",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Miaouchkinz/Lotide/issues"
