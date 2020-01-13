@@ -35,11 +35,11 @@ const map = function(array, callback) {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 // TEST
-assertArraysEqual(map(["cat", "dog", "bird"], word => word[0]), ["c", "d", "b"]);
+// assertArraysEqual(map(["cat", "dog", "bird"], word => word[0]), ["c", "d", "b"]);
 
-assertArraysEqual(map(["jump", "around"], word => word[0]), ["j", "a"]);
+// assertArraysEqual(map(["jump", "around"], word => word[0]), ["j", "a"]);
 
-assertArraysEqual(map(["test", "are", "so", "useful"], word => word[0]), ["t", "a", "s", "u"]);
+// assertArraysEqual(map(["test", "are", "so", "useful"], word => word[0]), ["t", "a", "s", "u"]);
