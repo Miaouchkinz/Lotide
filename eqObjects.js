@@ -1,25 +1,5 @@
-// NOTE: Our assertEqual function can only compare primitive values.
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-  
-};
-
-const eqArrays  = function(firstArray, secondArray) {
-  let isSame = true;
-  if (firstArray.length !== secondArray.length) {
-    isSame = false;
-  }
-  for (let i = 0; i < firstArray.length; i++) {
-    if (firstArray[i] !== secondArray[i]) {
-      isSame = false;
-    }
-  }
-  return isSame;
-};
+const assertEqual = require('./assertEqual');
+const eqArrays  = require('./eqArrays');
 
 const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
@@ -35,6 +15,8 @@ const eqObjects = function(object1, object2) {
   }
   return true;
 };
+
+module.exports = eqObjects;
 
 // TEST
 // const ab = { a: "1", b: "2" };
