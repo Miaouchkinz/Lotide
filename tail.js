@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else if (actual !== expected) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 const tail = function(tailOfArray) {
   tailOfArray.shift();
@@ -20,3 +14,5 @@ const tail = function(tailOfArray) {
 // An empty array should yield an empty array for its tail
 // const emptyArray = [];
 // assertEqual(tail(emptyArray).length, 0);
+
+module.exports = tail;
